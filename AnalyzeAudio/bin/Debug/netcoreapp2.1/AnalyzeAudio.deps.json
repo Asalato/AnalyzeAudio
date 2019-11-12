@@ -1,0 +1,79 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "e3ab6dafbd7d1d438360a888433ad917e155e552"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "AnalyzeAudio/1.0.0": {
+        "dependencies": {
+          "Accord.Math": "3.8.2-alpha",
+          "NAudio": "1.9.0"
+        },
+        "runtime": {
+          "AnalyzeAudio.dll": {}
+        }
+      },
+      "Accord/3.8.2-alpha": {
+        "runtime": {
+          "lib/netstandard2.0/Accord.dll": {
+            "assemblyVersion": "3.8.2.0",
+            "fileVersion": "3.8.2.6153"
+          }
+        }
+      },
+      "Accord.Math/3.8.2-alpha": {
+        "dependencies": {
+          "Accord": "3.8.2-alpha"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Accord.Math.Core.dll": {
+            "assemblyVersion": "3.8.2.0",
+            "fileVersion": "3.8.2.6153"
+          },
+          "lib/netstandard2.0/Accord.Math.dll": {
+            "assemblyVersion": "3.8.2.0",
+            "fileVersion": "3.8.2.6153"
+          }
+        }
+      },
+      "NAudio/1.9.0": {
+        "runtime": {
+          "lib/netstandard2.0/NAudio.dll": {
+            "assemblyVersion": "1.9.0.0",
+            "fileVersion": "1.9.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AnalyzeAudio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Accord/3.8.2-alpha": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-g/EKYGdeMKTMJt7XtB65f+RyVW5ALfU1f1T1dpIGXOqzBtaaNK+OGB6pFY9RFrjKPQNUlnKUWF2jwH5knM+X7A==",
+      "path": "accord/3.8.2-alpha",
+      "hashPath": "accord.3.8.2-alpha.nupkg.sha512"
+    },
+    "Accord.Math/3.8.2-alpha": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-derpraljs7QO7U06DzGu1EHNVN+LGM2oA/z3M/zERSWXGs/BVOjMtUBx5WjdMnKXaM0OJiqZFNus3y3C04/H2w==",
+      "path": "accord.math/3.8.2-alpha",
+      "hashPath": "accord.math.3.8.2-alpha.nupkg.sha512"
+    },
+    "NAudio/1.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PjcPhL5AnbF1YmZxqFYuAEVVRNCNWWIm6Gi32AGQ0dmHF9+s7TUFfVxEo46MbeIfpUE+Wz60ZNTLMXTxBI1m9w==",
+      "path": "naudio/1.9.0",
+      "hashPath": "naudio.1.9.0.nupkg.sha512"
+    }
+  }
+}

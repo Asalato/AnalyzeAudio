@@ -1,0 +1,12 @@
+C:\Users\mimim\source\repos\AnalyzeAudio\AnalyzeAudio\bin\Debug\netcoreapp2.1\AnalyzeAudio.deps.json
+C:\Users\mimim\source\repos\AnalyzeAudio\AnalyzeAudio\bin\Debug\netcoreapp2.1\AnalyzeAudio.runtimeconfig.json
+C:\Users\mimim\source\repos\AnalyzeAudio\AnalyzeAudio\bin\Debug\netcoreapp2.1\AnalyzeAudio.runtimeconfig.dev.json
+C:\Users\mimim\source\repos\AnalyzeAudio\AnalyzeAudio\bin\Debug\netcoreapp2.1\AnalyzeAudio.dll
+C:\Users\mimim\source\repos\AnalyzeAudio\AnalyzeAudio\obj\Debug\netcoreapp2.1\AnalyzeAudio.csprojAssemblyReference.cache
+C:\Users\mimim\source\repos\AnalyzeAudio\AnalyzeAudio\obj\Debug\netcoreapp2.1\AnalyzeAudio.csproj.CoreCompileInputs.cache
+C:\Users\mimim\source\repos\AnalyzeAudio\AnalyzeAudio\obj\Debug\netcoreapp2.1\AnalyzeAudio.AssemblyInfoInputs.cache
+C:\Users\mimim\source\repos\AnalyzeAudio\AnalyzeAudio\obj\Debug\netcoreapp2.1\AnalyzeAudio.AssemblyInfo.cs
+C:\Users\mimim\source\repos\AnalyzeAudio\AnalyzeAudio\bin\Debug\netcoreapp2.1\AnalyzeAudio.pdb
+C:\Users\mimim\source\repos\AnalyzeAudio\AnalyzeAudio\obj\Debug\netcoreapp2.1\AnalyzeAudio.dll
+C:\Users\mimim\source\repos\AnalyzeAudio\AnalyzeAudio\obj\Debug\netcoreapp2.1\AnalyzeAudio.pdb
+C:\Users\mimim\source\repos\AnalyzeAudio\AnalyzeAudio\bin\Debug\netcoreapp2.1\Accord.dll.config
