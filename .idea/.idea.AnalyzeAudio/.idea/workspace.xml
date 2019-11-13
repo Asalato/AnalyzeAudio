@@ -9,15 +9,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/AnalyzeAudio/FourierProcess.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AnalyzeAudio/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AnalyzeAudio/Freq2Note.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnalyzeAudio/FourierProcess.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnalyzeAudio/DeserializeSongs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnalyzeAudio/DetectSongs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AnalyzeAudio/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/AnalyzeAudio/FourierProcess.cs" />
         <option value="$PROJECT_DIR$/AnalyzeAudio/Freq2Note.cs" />
+        <option value="$PROJECT_DIR$/AnalyzeAudio/DeserializeSongs.cs" />
+        <option value="$PROJECT_DIR$/AnalyzeAudio/DetectSongs.cs" />
         <option value="$PROJECT_DIR$/AnalyzeAudio/Program.cs" />
       </list>
     </option>
@@ -80,6 +84,7 @@
       <updated>1573495967217</updated>
       <workItem from="1573495968781" duration="3462000" />
       <workItem from="1573561210375" duration="9624000" />
+      <workItem from="1573622822503" duration="10057000" />
     </task>
     <servers />
   </component>

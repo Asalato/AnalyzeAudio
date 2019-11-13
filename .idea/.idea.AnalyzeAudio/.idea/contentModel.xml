@@ -3,11 +3,13 @@
   <component name="ContentModelStore">
     <e p="C:\Users\mimim\.nuget\packages\accord\3.8.2-alpha\build\Accord.dll.config" t="Include" />
     <e p="C:\Users\mimim\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\mimim\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_AnalyzeAudio.-1622543564.00" t="ExcludeRecursive" />
-    <e p="C:\Users\mimim\source\repos\AnalyzeAudio" t="IncludeFlat">
+    <e p="C:\Users\mimim\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_AnalyzeAudio.1235156923.00" t="ExcludeRecursive" />
+    <e p="C:\Users\mimim\Documents\GitHub\AnalyzeAudio" t="IncludeFlat">
       <e p="AnalyzeAudio" t="IncludeRecursive">
         <e p="AnalyzeAudio.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="DeserializeSongs.cs" t="Include" />
+        <e p="DetectSongs.cs" t="Include" />
         <e p="FourierProcess.cs" t="Include" />
         <e p="Freq2Note.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">

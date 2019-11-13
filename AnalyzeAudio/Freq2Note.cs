@@ -41,22 +41,15 @@ namespace AnalyzeAudio
             var leftDiff = freq - noteBaseFreqs[rightNoteIndex - 1];
             var rightDiff = noteBaseFreqs[rightNoteIndex] - freq;
             var midFreq = (noteBaseFreqs[rightNoteIndex] + noteBaseFreqs[rightNoteIndex - 1]) / 2;
-
-            var noteAccuracy = new NoteAccuracy();
-            if (leftDiff > rightDiff)
+            
+            var targetNoteIndex = leftDiff > rightDiff ? rightNoteIndex : rightNoteIndex - 1;
+            
+            return new NoteAccuracy
             {
-                noteAccuracy.note = (Note) (rightNoteIndex % 12);
-                noteAccuracy.octave = rightNoteIndex / 12 + 1;
-                noteAccuracy.accuracy = (freq - midFreq) / (noteBaseFreqs[rightNoteIndex] - midFreq);
-            }
-            else
-            {
-                noteAccuracy.note = (Note) ((rightNoteIndex - 1) % 12);
-                noteAccuracy.octave = (rightNoteIndex - 1) / 12 + 1;
-                noteAccuracy.accuracy = (midFreq - freq) / (midFreq - noteBaseFreqs[rightNoteIndex - 1]);
-            }
-
-            return noteAccuracy;
+                note = (Note) (targetNoteIndex % 12),
+                octave = targetNoteIndex / 12 + 1,
+                accuracy = (freq - midFreq) / (noteBaseFreqs[targetNoteIndex] - midFreq)
+            };
         }
 
         public struct NoteAccuracy
@@ -81,5 +74,60 @@ namespace AnalyzeAudio
         A,
         As,
         B
+    }
+
+    public static class NoteUtility
+    {
+        public static Note StringToNote(string str)
+        {
+            if (str == "C")
+                return Note.C;
+            else if (str == "Cs")
+                return Note.Cs;
+            else if (str == "D")
+                return Note.D;
+            else if (str == "Ds")
+                return Note.Ds;
+            else if (str == "E")
+                return Note.E;
+            else if (str == "F")
+                return Note.F;
+            else if (str == "Fs")
+                return Note.Fs;
+            else if (str == "G")
+                return Note.G;
+            else if (str == "Gs")
+                return Note.Gs;
+            else if (str == "A")
+                return Note.A;
+            else if (str == "As")
+                return Note.As;
+            else if (str == "B")
+                return Note.B;
+            else throw new KeyNotFoundException();
+        }
+
+        public static bool IsNote(string str)
+        {
+            try
+            {
+                StringToNote(str);
+                return true;
+            }
+            catch (KeyNotFoundException e)
+            {
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+    }
+
+    public struct NoteOctave
+    {
+        public Note note;
+        public int octave;
     }
 }

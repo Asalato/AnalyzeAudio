@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using NAudio.Dsp;
 using NAudio.Wave;
 
 namespace AnalyzeAudio
@@ -11,15 +10,26 @@ namespace AnalyzeAudio
     class Program
     {
         private static readonly int SamplingRate = 44100;
-        private static readonly int BufferSize = (int) Math.Pow(2, 11);
+        private static readonly int BufferSize = (int) Math.Pow(2, 13);
 
         private static BufferedWaveProvider bwp;
 
         private static bool keyPressed = false;
         private static object lockObj = new object();
 
+        private static string DefaultSongAddress = @"Songs.txt";
+
         static void Main(string[] args)
         {
+            var songs = new List<Song>();
+            songs.AddRange(DeserializeSongs.LoadSongs(args));
+            songs.AddRange(DeserializeSongs.LoadSongs(DefaultSongAddress));
+            DetectSongs.Initialize(songs);
+
+            var sb = new StringBuilder();
+            songs.Select(item => sb.Append($"{item.name}, ")).ToArray();
+            Console.WriteLine($"{songs.Count} songs loaded: {sb.ToString()}");
+            
             var deviceCount = WaveInEvent.DeviceCount;
             if(deviceCount == 0)
             {
@@ -42,7 +52,7 @@ namespace AnalyzeAudio
                 Console.WriteLine($"Select device from {0} to {deviceCount - 1}");
             }
 
-            Console.WriteLine("Press escape key for finish process.");
+            Console.WriteLine("Press escape to finish process.");
             
             Freq2Note.Init();
             var waveIn = new WaveInEvent() {DeviceNumber = index};
@@ -74,14 +84,26 @@ namespace AnalyzeAudio
                 {
                     if (keyPressed) break;
                 }
+                
                 var note = Process();
+                if (note != null)
+                {
+                    DetectSongs.NoteStreamLoader(note.Value);
+                }
+
+                var song = DetectSongs.FindSong();
+                if (song != null)
+                {
+                    Console.WriteLine($"Song detect: {song.Value.name}");
+                }
             }
             
             waveIn.StopRecording();
             waveIn.Dispose();
         }
         
-        private static void EscapeLoad(object userState) {
+        private static void EscapeLoad(object userState)
+        {
             var keyInfo = Console.ReadKey(true);
             if (keyInfo.Key == ConsoleKey.Escape)
             {
@@ -97,7 +119,7 @@ namespace AnalyzeAudio
             bwp.AddSamples(e.Buffer, 0, e.BytesRecorded);
         }
 
-        private static (Note, int)? Process()
+        private static NoteOctave? Process()
         {
             // check the incoming microphone audio
             int frameSize = BufferSize;
@@ -151,7 +173,7 @@ namespace AnalyzeAudio
             if (noteAccuracy.accuracy > 0.5)
             {
                 Console.WriteLine($"Frequency: {peekFrequency:F2}Hz, Note: {noteAccuracy.note}{noteAccuracy.octave}, Accuracy: {noteAccuracy.accuracy * 100:F0}%");
-                return (noteAccuracy.note, noteAccuracy.octave);
+                return new NoteOctave() {note = noteAccuracy.note, octave = noteAccuracy.octave};
             }
 
             return null;

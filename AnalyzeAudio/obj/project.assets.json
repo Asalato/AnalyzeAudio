@@ -839,11 +839,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mimim\\source\\repos\\AnalyzeAudio\\AnalyzeAudio\\AnalyzeAudio.csproj",
+      "projectUniqueName": "C:\\Users\\mimim\\Documents\\GitHub\\AnalyzeAudio\\AnalyzeAudio\\AnalyzeAudio.csproj",
       "projectName": "AnalyzeAudio",
-      "projectPath": "C:\\Users\\mimim\\source\\repos\\AnalyzeAudio\\AnalyzeAudio\\AnalyzeAudio.csproj",
+      "projectPath": "C:\\Users\\mimim\\Documents\\GitHub\\AnalyzeAudio\\AnalyzeAudio\\AnalyzeAudio.csproj",
       "packagesPath": "C:\\Users\\mimim\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mimim\\source\\repos\\AnalyzeAudio\\AnalyzeAudio\\obj\\",
+      "outputPath": "C:\\Users\\mimim\\Documents\\GitHub\\AnalyzeAudio\\AnalyzeAudio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
