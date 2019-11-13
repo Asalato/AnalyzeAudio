@@ -9,7 +9,7 @@ namespace AnalyzeAudio
 {
     class Program
     {
-        private static readonly int SamplingRate = 44100;
+        private static readonly int SamplingRate = 8000;
         private static readonly int BufferSize = (int) Math.Pow(2, 13);
 
         private static BufferedWaveProvider bwp;
@@ -94,7 +94,7 @@ namespace AnalyzeAudio
                 var song = DetectSongs.FindSong();
                 if (song != null)
                 {
-                    Console.WriteLine($"Song detect: {song.Value.name}");
+                    Console.WriteLine($"------------------------------------\nSong detect: {song.Value.name}\n------------------------------------");
                 }
             }
             
